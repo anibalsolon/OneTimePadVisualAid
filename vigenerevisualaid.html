@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="vigenerevisualaid.js"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<style type="text/css">
+
+		@font-face {
+		  font-family: 'Lato';
+		  font-style: normal;
+		  font-weight: 400;
+		  src: local('Lato Regular'),
+		  	local('Lato-Regular'),
+		  	url(http://themes.googleusercontent.com/static/fonts/lato/v7/9k-RPmcnxYEPm8CNFsH2gg.woff) format('woff');
+		}
+
+		html, body { padding:10px; margin:0; font-family: 'Lato', Verdana, sans-serif; }
+
+		#input textarea { white-space: nowrap; min-height: 300px }
+
+		.line { border:1px solid #CCC; margin:10px 0 0 10px; background: #EEE; white-space: nowrap; float:left; width: 100%; }
+		.line .char { cursor: pointer; border:1px solid #CCC; margin:10px 0 10px 10px; display: inline-block; text-align: center; padding: 5px; background: #FFF }
+		.line .char.select { border-color: #000; }
+		.line .char .raw { font-size: 200%; }
+		.line .char .hex, #content .line .char .bin { color:#999; }
+		.line .clear { clear: both; }
+
+		#trial { position:absolute; top:10px; left:0; right:0; overflow: hidden; overflow-y: scroll; padding-right: 10px; }
+		#trial .line { background: #AAE; margin:0 10px; }
+		#content { position:absolute; left:0; right:0; bottom:0; overflow: auto; overflow-y: scroll; padding-right: 10px; }
+
+	</style>
+</head>
+<body class="container">
+	<div id="input" class="jumbotron">
+		<div class="form-group">
+		<input type="text" class="form-control" value="jffasdkfhcvggzxywferwuvcpwicmtxwtvallcgfatsmcfdolcbnfeathjdecxgffda0lcbcffddjzmdbdhfvksfsqpclxnsfgqwbxf" />
+		</div>
+		<div class="form-group">
+		<textarea class="form-control">2d0f10041d440a460b0a060f02080c1c0f1245131911560214010c111e150a0e54150002020c1346051d00190a08031a05100a4e0f0341190d191704041d470f15440c004c0c10430b57440205084d050e08480b464b1c14531c414d
+27091515531404110d1110120b5a191d0103170116070f431c120811030758191b02090502044707031b061943120c0a4c130e0f0f0b1511101e440311170a46120c04100f0a120b03141001120e43
+29141f11070b0c1409131e1e471917171403171c0455020b15571911021e1d14001f0e024c0c01461506061e175c441b0d080b00014515061d191045050a080b461309551e06420a1246011c030919174210074601031614165119174c111d5308021413071c48
+3e0e0341000108140d000f470a0f0b0d571400011e11134315191d0a1f11140e54190f4c180b02460a110a4143080b1b4c170a0b46060804000f164502140009140d1558014d
+3e0e03411701180f0f0d5608015a1959041f16061218561018181c0f09541618005613091d160e14045400080014010c15430d084611091148191d16171d0a48
+29141f1107050507041a050e145a2c11124604000355170d14571a000411161411560e0a4c0209070d0d09040d01441809020900031612111b4a0b03431b0e160e0113100d0f050c140f100c070943
+29141f11070b0c1409131e1e47130b59031f151b14141a0f09570b1a1d150b0411124d4c020c134611111d081714051b09074c</textarea>
+		</div>
+		<div class="form-group">
+		<button id="disassemble" type="button" class="btn btn-primary">Disassemble</button>
+		</div>
+	</div>
+	<div id="trial"></div>
+	<div id="content"></div>
+</body>
+</html>
