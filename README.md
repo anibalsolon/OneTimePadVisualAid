@@ -1,2 +1,2 @@
-# VigenereVisualAid
-An user interface to aid in manual decoding of Vigenère Cipher
+# OneTimePadVisualAid
+An user interface to aid in manual decoding of One-Time Pad Cipher
